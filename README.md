@@ -12,7 +12,7 @@ To use this image, you will need to use the `--privileged` flag. Note that this 
 
 You should also mount `/run` and `/run/lock` as tmpfs mounts. The container's `/sys/fs/cgroup` should be a read-only mount to the same directory on the host. You should also create a Docker volume at `/var/lib/docker` to persist Docker state across container runs. Do not have multiple containers share this volume.
 
-The Docker Compose for the above configuraton looks like:
+The Docker Compose for the above configuration looks like:
 
 ```yaml
 version: "3.9"

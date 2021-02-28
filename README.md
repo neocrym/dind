@@ -8,7 +8,7 @@ If you are fine with giving your code access to your host machine's Docker socke
 
 ## Usage
 
-To use this image, you will need to use the `--privileged` flag. Note that this effectively gives this container root access to your machine.
+To use this image, you will need to use the `--privileged` flag. Note that this effectively gives this container root access to your machine. At this time of writing, this container will not work on Docker Swarm because Swarm Mode does not support the `--privileged` flag for containers.
 
 You should also mount `/run` and `/run/lock` as tmpfs mounts. The container's `/sys/fs/cgroup` should be a read-only mount to the same directory on the host. You should also create a Docker volume at `/var/lib/docker` to persist Docker state across container runs. Do not have multiple containers share this volume.
 
